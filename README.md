@@ -10,10 +10,10 @@ Angular:<br>
 
 Package                      Version
 ------------------------------------------------------
-@angular-devkit/architect    0.1303.0 (cli-only)
-@angular-devkit/core         13.3.0 (cli-only)
-@angular-devkit/schematics   13.3.0 (cli-only)
-@schematics/angular          13.3.0 (cli-only)
+@angular-devkit/architect    0.1303.0 (cli-only)<br>
+@angular-devkit/core         13.3.0 (cli-only)<br>
+@angular-devkit/schematics   13.3.0 (cli-only)<br>
+@schematics/angular          13.3.0 (cli-only)<br>
 
 <br>
 
