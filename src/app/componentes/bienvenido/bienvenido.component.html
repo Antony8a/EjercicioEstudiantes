@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="text-center">
+        <p> <strong>QUIZ INGRESO DE NOTAS</strong> </p>
+        <hr>
+
+        <div class="card text-center" style="padding: 40px;">
+            
+            <br>
+            <form [formGroup]="register"(ngSubmit)=registrar()>
+                <div class="row">
+                    <div class="form-goup col-ml-2">
+                        <input type="text" class="form-control" placeholder="Nombre del estudiante" formControlName="nombre">
+                        <span class="text-danger ml-2"
+                            *ngIf="register.get('nombre')?.hasError('required') && register.get('nombre')?.touched">
+                            La nota <strong>es requerida</strong>
+                        </span>
+                    </div>
+                    <div class="form-goup col">
+                        <input type="text" class="form-control" placeholder="Primera nota" formControlName="nota1">
+                        <span class="text-danger ml-2"
+                            *ngIf="register.get('nota1')?.hasError('required') && register.get('nota1')?.touched">
+                            La nota <strong>es requerida</strong>
+                        </span>
+                    </div>
+                    <div class="form-goup col">
+                        
+                        <input type="text" class="form-control" placeholder="Segunda nota" formControlName="nota2">                
+                        <span class="text-danger ml-2"
+                            *ngIf="register.get('nota2')?.hasError('required') && register.get('nota2')?.touched">
+                            La nota <strong>es requerida</strong>
+                        </span>
+                        
+                    </div>
+                    <div class="form-goup col">
+                        
+                        <input type="text" class="form-control" placeholder="Tercera nota" formControlName="nota3">
+                        <span class="text-danger ml-2"
+                            *ngIf="register.get('nota3')?.hasError('required') && register.get('nota3')?.touched">
+                            La nota <strong>es requerida</strong>
+                        </span>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-xl mt-4">REGISTRAR</button>
+            </form>
+        </div>
+
+        <app-consultar-notas [estudiantes]="listEstudiantes" ></app-consultar-notas>
+    </div>
+</div>
+

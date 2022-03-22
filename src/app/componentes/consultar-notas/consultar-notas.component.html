@@ -1,0 +1,28 @@
+<div class="card text-center mt-4" style="padding: 40px;">
+    <div class="row">
+        <h3>Lista de estudiantes</h3>
+    </div>
+    <br>
+    <table class="table">
+        <thead>
+            <th>Nro</th>
+            <th>Nombre</th>
+            <th>Nota 1</th>
+            <th>Nota 2</th>
+            <th>Nota 3</th>
+            <th>Promedio</th>
+            <th>Estado</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let estudiante of estudiantes ; let i = index">
+                <td>{{i+1}}</td>
+                <td>{{estudiante.nombre}}</td>
+                <td>{{estudiante.nota1}}</td>
+                <td>{{estudiante.nota2}}</td>
+                <td>{{estudiante.nota3}}</td>
+                <td>{{estudiante.promedio}}</td>
+                <td>{{estudiante.estado}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
