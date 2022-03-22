@@ -16,9 +16,9 @@ export class BienvenidoComponent implements OnInit {
   constructor(private fb:FormBuilder) {
     this.register = this.fb.group({
       nombre:['',Validators.required],
-      nota1:['',Validators.required],
-      nota2:['',Validators.required],
-      nota3:['',Validators.required]
+      nota1:['',[Validators.required,Validators.min(0),Validators.max(5)]],
+      nota2:['',[Validators.required,Validators.min(0),Validators.max(5)]],
+      nota3:['',[Validators.required,Validators.min(0),Validators.max(5)]]
     })
    }
 
