@@ -26,7 +26,8 @@ export class BienvenidoComponent implements OnInit {
   }
 
   registrar(){
-    
+    console.log(this.register.value.promedio)
+    console.log(this.register.value.nota1)
 
     const estudiante:Estudiante={
       nombre: this.register.value.nombre,
@@ -34,11 +35,12 @@ export class BienvenidoComponent implements OnInit {
       nota2: this.register.value.nota2,
       nota3: this.register.value.nota3,
       promedio: this.calcularPromedio(Number(this.register.value.nota1),Number(this.register.value.nota2),Number(this.register.value.nota3)),
-      estado: this.estado(Number(this.register.value.promedio))
+      estado: ''
     }
-    
+
+    estudiante.estado = this.estado(estudiante.promedio)
     this.listEstudiantes.push(estudiante);
-    
+
   }
 
   calcularPromedio(nota_1:number,nota_2:number,nota_3:number) : number{

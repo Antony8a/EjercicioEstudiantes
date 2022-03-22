@@ -15,5 +15,7 @@ export class ConsultarNotasComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
+
 
 }
